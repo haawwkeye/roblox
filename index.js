@@ -18,12 +18,12 @@ function redirect(url) {
     if (url.startsWith("http://") || url.startsWith("https://"))
     {
         checked = checkUrl(url);
-    } else {
+    } /*else {
         // check with http:// or https:// (try https first)
         var _url = checkUrl("https://" + url)
         if (!_url.success) _url = checkUrl("http://" + url);
         checked = _url;
-    }
+    }*/
     const redirectBody = document.querySelector("div[id='redirectBody']");
     const redirectGo = document.querySelector("button[id='redirectGo']");
     const redirectBack = document.querySelector("button[id='redirectBack']");
