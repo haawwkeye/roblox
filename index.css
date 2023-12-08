@@ -9,6 +9,10 @@ body {
     background-color: #495057 !important;
 }
 
+.link {
+    color: #5f9fff;
+}
+
 .url {
     color: white;
     background-color: rgb(40, 44, 47);

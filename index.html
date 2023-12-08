@@ -10,6 +10,10 @@
     <link href="./index.css" rel="stylesheet">
   </head>
   <body>
+    <div hidden>
+      <!-- Button trigger modal -->
+      <button id="toggleRedirect" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></button>
+    </div>
     <input class="url" type="text" placeholder="Redirect URL">
     <nav class="topnav">
       <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -18,21 +22,20 @@
         <a class="nav-link" href="javascript:window.open(window.location.href + '?new_win=true')" type="button" role="tab" id="win">New Window</a>
       </div>
     </nav>
+
     <!-- Modal -->
-    <div class="modal fade" id="RedirectModalCenter" tabindex="-1" role="dialog" aria-labelledby="RedirectModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="RedirectModalLongTitle">Redirect Warning</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Redirect Warning</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
+          <div id="redirectBody" class="modal-body">
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Continue</button>
+            <button id="redirectBack" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button id="redirectGo" type="button" class="btn btn-primary">Understood</button>
           </div>
         </div>
       </div>
