@@ -4,22 +4,38 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roblox Home</title>
-    <script>
-      let is_new_window = window.location.search != "";
-      document.addEventListener("DOMContentLoaded", async () => {
-        if (is_new_window) document.querySelector("a[id=win]").remove()
-      });
-    </script>
+    <script src="./index.js"></script>
+    <link href="./index.css" rel="stylesheet">
   </head>
   <body>
-    <nav>
+    <input class="url" type="text" placeholder="Redirect URL">
+    <nav class="topnav">
       <div class="nav nav-tabs" id="nav-tab" role="tablist">
         <a class="nav-link" href="https://google.com" type="button" role="tab">Google</a>
         <a class="nav-link" href="https://youtube.com" type="button" role="tab">YouTube</a>
         <a class="nav-link" href="javascript:window.open(window.location.href + '?new_win=true')" type="button" role="tab" id="win">New Window</a>
       </div>
     </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="RedirectModalCenter" tabindex="-1" role="dialog" aria-labelledby="RedirectModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="RedirectModalLongTitle">Redirect Warning</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
